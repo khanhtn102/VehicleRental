@@ -1,0 +1,48 @@
+﻿#btnSearch:hover{
+    background-color:#4CAF50; /*màu xanh green*/
+    color:white;
+    transition-duration:0.4s;
+}
+
+#navMenu li ul li a:hover{
+    background-color:#4CAF50;
+}
+
+.menubar{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#navMenu li:hover{
+    background-color:#4CAF50;
+    transition-duration:0.5s;
+}
+
+#navMenu li a:hover{
+    color:white;
+}
+
+#bodyInfo{
+    background-color:blue;
+    height:300px;
+}
+
+#footer{
+    background-color:#f2f2f2;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  #d9d9d9 white white white;
+}
+
+#btnCancle:hover{
+    background-color:#b3b3b3;
+    color:white;
+}
+
+#subFooter{
+    height:20px;
+    background-color:#4CAF50;
+}
+
+#bodyTitle{
+    background-color:#f2f2f2;
+}

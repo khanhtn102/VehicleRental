@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/MyCss/LayoutDefaultCss.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <!-- Menubar -->
+    <div class="container-fluid" id="menubar">
+        <div class="container">
+            <div class="col-md-3">
+                <h2>Vehicle Rental</h2>
+            </div>
+            <div class="col-md-3">
+                <br />
+                <img src="~/Image/phone32x32.png" /> <strong>Phone: </strong>(08) 456-789
+            </div>
+            <div class="col-md-3">
+                <br />
+                <img src="~/Image/mail32x32.png" /> <strong>Email: </strong>khanhtn102@gmail.com
+            </div>
+            <div class="col-md-3">
+                <br />
+                <button type="button" class="btn btn-default" id="btnDangKy">Đăng Ký Chủ Xe</button>
+                <button type="button" class="btn btn-default" id="btnDangNhap" data-toggle="modal" data-target="#loginModal">Đăng Nhập</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Div space -->
+    <div class="container" style="height:50px">
+
+    </div>
+
+    <!-- Content Honda-->
+    <div class="container">
+        <img src="~/Image/vespa.png" class="col-md-4 col-md-offset-4"/>
+    </div>
+    <div class="container">
+        <p class="col-md-6 col-md-offset-3" style="font-size:20px">
+            <strong style="font-size:40px">Tình.</strong><br />
+            Hãy <strong>"Đưa nhau đi trốn"</strong>với người ấy trên chiếc xe máy tình cảm.
+            Cùng nhau đi tới tận cùng trái đất.
+        </p>
+    </div>
+    <div class="container">
+        <div class="col-md-4 col-md-offset-4">
+            <button type="button" class="btn btn-default btn-lg btn-block" id="btnHonda"><strong>></strong></button>
+        </div>
+    </div>
+
+    <!-- Div space -->
+    <div class="container" style="height:50px">
+
+    </div>
+
+    <!-- Content Car-->
+    <div class="container">
+        <img src="~/Image/car.png" class="col-md-4 col-md-offset-4" />
+    </div>
+    <div class="container">
+        <br />
+        <p class="col-md-6 col-md-offset-3" style="font-size:20px">
+            <strong style="font-size:40px">Nắng Gió Mưa ?</strong><br />
+            Chuyện nhỏ. Một chiếc xế hộp sẽ đem lại cho gia đình bạn một chuyến du lịch tuyệt vời.
+        </p>
+    </div>
+    <div class="container">
+        <div class="col-md-4 col-md-offset-4">
+            <button type="button" class="btn btn-default btn-lg btn-block" id="btnCar"><strong>></strong></button>
+        </div>
+    </div>
+
+    <!-- Div space -->
+    <div class="container" style="height:150px">
+
+    </div>
+
+    <!-- Modal to show Login -->
+    <div class="modal fade" id="loginModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Đăng Nhập</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input type="hidden" class="form-control" id="Id" />
+                                <input type="text" id="Username" class="form-control" placeholder="Tài Khoản"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input type="password" id="Password" class="form-control" placeholder="Mật Khẩu"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnCancle" class="btn btn-default" data-dismiss="modal">Thoát</button>
+                    <button type="button" id="btnLogin" class="btn btn-success">Đăng Nhập</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>
