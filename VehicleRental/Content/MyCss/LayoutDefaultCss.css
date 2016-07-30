@@ -10,6 +10,7 @@
 #btnDangNhap:hover{
     background-color:#4CAF50; /*màu xanh green*/
     color:white;
+    transition-duration:0.3s;
 }
 
 #btnDangKy{
@@ -28,6 +29,7 @@
 #btnHonda:hover{
     background-color:#4CAF50; /*màu xanh green*/
     color:white;
+    transition-duration:0.3s;
 }
 
 #btnCar{
@@ -38,6 +40,7 @@
 #btnCar:hover{
     background-color:#4CAF50; /*màu xanh green*/
     color:white;
+    transition-duration:0.3s;
 }
 
 #btnCancle:hover{
