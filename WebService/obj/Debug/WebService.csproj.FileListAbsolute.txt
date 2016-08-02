@@ -61,3 +61,5 @@ E:\GitHub\VehicleRental\WebService\bin\EntityFramework.dll
 E:\GitHub\VehicleRental\WebService\bin\EntityFramework.SqlServer.dll
 E:\GitHub\VehicleRental\WebService\bin\EntityFramework.xml
 E:\GitHub\VehicleRental\WebService\bin\EntityFramework.SqlServer.xml
+E:\GitHub\VehicleRental\WebService\bin\VehicleRental.Data.dll
+E:\GitHub\VehicleRental\WebService\bin\VehicleRental.Data.pdb

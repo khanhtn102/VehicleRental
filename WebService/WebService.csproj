@@ -159,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -193,44 +194,12 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\OrderSVController.cs" />
+    <Compile Include="Controllers\UserAPIController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Brand.cs">
-      <DependentUpon>VehicleRentalModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Order.cs">
-      <DependentUpon>VehicleRentalModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>VehicleRentalModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Type.cs">
-      <DependentUpon>VehicleRentalModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\User.cs">
-      <DependentUpon>VehicleRentalModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Vehicle.cs">
-      <DependentUpon>VehicleRentalModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\VehicleRentalModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>VehicleRentalModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\VehicleRentalModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>VehicleRentalModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\VehicleRentalModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>VehicleRentalModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -241,16 +210,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\VehicleRentalModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VehicleRentalModel.edmx</DependentUpon>
-      <LastGenOutput>VehicleRentalModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\VehicleRentalModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VehicleRentalModel.edmx</DependentUpon>
-      <LastGenOutput>VehicleRentalModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -276,13 +235,6 @@
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <EntityDeploy Include="Models\VehicleRentalModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>VehicleRentalModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\VehicleRentalModel.edmx.diagram">
-      <DependentUpon>VehicleRentalModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -316,6 +268,12 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VehicleRental.Data\VehicleRental.Data.csproj">
+      <Project>{c3b331ed-307e-4263-893e-c4f8deec5096}</Project>
+      <Name>VehicleRental.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

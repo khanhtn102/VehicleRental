@@ -1,0 +1,10 @@
+E:\GitHub\VehicleRental\VehicleRental.Data\bin\Debug\VehicleRental.Data.dll.config
+E:\GitHub\VehicleRental\VehicleRental.Data\bin\Debug\VehicleRental.Data.dll
+E:\GitHub\VehicleRental\VehicleRental.Data\bin\Debug\VehicleRental.Data.pdb
+E:\GitHub\VehicleRental\VehicleRental.Data\bin\Debug\EntityFramework.dll
+E:\GitHub\VehicleRental\VehicleRental.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitHub\VehicleRental\VehicleRental.Data\bin\Debug\EntityFramework.xml
+E:\GitHub\VehicleRental\VehicleRental.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitHub\VehicleRental\VehicleRental.Data\obj\Debug\VehicleRental.Data.csprojResolveAssemblyReference.cache
+E:\GitHub\VehicleRental\VehicleRental.Data\obj\Debug\VehicleRental.Data.dll
+E:\GitHub\VehicleRental\VehicleRental.Data\obj\Debug\VehicleRental.Data.pdb

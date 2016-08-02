@@ -174,3 +174,5 @@ E:\GitHub\VehicleRental\VehicleRental\bin\System.Net.Http.Primitives.xml
 E:\GitHub\VehicleRental\VehicleRental\obj\Debug\VehicleRental.csproj.App.config
 E:\GitHub\VehicleRental\VehicleRental\obj\Debug\VehicleRental.StringResource.Configuration.resources
 E:\GitHub\VehicleRental\VehicleRental\obj\Debug\VehicleRental.csproj.GenerateResource.Cache
+E:\GitHub\VehicleRental\VehicleRental\bin\VehicleRental.Data.dll
+E:\GitHub\VehicleRental\VehicleRental\bin\VehicleRental.Data.pdb
