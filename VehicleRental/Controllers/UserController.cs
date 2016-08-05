@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SkyWeb.DatVM.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,15 +8,15 @@ using VehicleRental.Data.Model.Entities.Service;
 
 namespace VehicleRental.Controllers
 {
-    public class UserController : Controller
+    public class UserController : BaseController
     {
 
         private IUserService Service = null;
         
-        public UserController()
-        {
-            this.Service = new UserService();
-        }
+        //public UserController()
+        //{
+        //    this.Service = new UserService();
+        //}
 
         // GET: User
         public ActionResult Index()
@@ -25,7 +26,7 @@ namespace VehicleRental.Controllers
 
         public ActionResult GetListUser()
         {
-            return Json(Service.GetList(), JsonRequestBehavior.AllowGet);
+            return Json(Service.Get(), JsonRequestBehavior.AllowGet);
         }
     }
 }

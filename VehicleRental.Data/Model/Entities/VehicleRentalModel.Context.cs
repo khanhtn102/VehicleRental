@@ -29,7 +29,7 @@ namespace VehicleRental.Data.Model.Entities
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Vehicle> Vehicles { get; set; }
-        public virtual DbSet<VehicleImage> VehicleImages { get; set; }
         public virtual DbSet<VehicleType> VehicleTypes { get; set; }
+        public virtual DbSet<VehicleImage> VehicleImages { get; set; }
     }
 }

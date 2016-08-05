@@ -7,30 +7,17 @@ using System.Threading.Tasks;
 
 namespace VehicleRental.Data.Model.Entities.Service
 {
-    public interface IUserService
+    public partial interface IUserService
     {
-        List<User> GetList();
         User CheckLogin(string username, string password);
     }
 
-    public class UserService : IUserService
+    public partial class UserService
     {
-
-        VehicleRentalEntities db = null;
-
-        public UserService()
-        {
-            db = new VehicleRentalEntities();
-        }
-
         public User CheckLogin(string username, string password)
         {
-            return db.Users.Where(n => n.Username == username && n.Password == password).SingleOrDefault();
-        }
-
-        public List<User> GetList()
-        {
-            return db.Users.ToList();
+            var user = this.Get().Where(n => n.Username == username && n.Password == password).FirstOrDefault();
+            return user;
         }
     }
 }

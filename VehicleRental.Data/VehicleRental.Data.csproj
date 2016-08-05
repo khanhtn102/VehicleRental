@@ -38,6 +38,14 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SkyWeb.DatVM.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\SkyWeb.DatVM.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyWeb.DatVM.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\SkyWeb.DatVM.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -54,18 +62,87 @@
     <Compile Include="Model\Entities\Brand.cs">
       <DependentUpon>VehicleRentalModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Entities\BrandRefined.cs">
+      <DependentUpon>EntityRefinery.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\EntityRefinery.cs" />
+    <Compile Include="Model\Entities\EntityRefinery1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityRefinery.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Entities\Order.cs">
       <DependentUpon>VehicleRentalModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Entities\OrderRefined.cs">
+      <DependentUpon>EntityRefinery.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Repositories\BrandRepositoryGen.cs">
+      <DependentUpon>Repositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Repositories\OrderRepositoryGen.cs">
+      <DependentUpon>Repositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Repositories\Repositories.cs" />
+    <Compile Include="Model\Entities\Repositories\Repositories1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Repositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Repositories\UserRepositoryGen.cs">
+      <DependentUpon>Repositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Repositories\VehicleImageRepositoryGen.cs">
+      <DependentUpon>Repositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Repositories\VehicleRepositoryGen.cs">
+      <DependentUpon>Repositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Repositories\VehicleTypeRepositoryGen.cs">
+      <DependentUpon>Repositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Service\BrandServiceGen.cs">
+      <DependentUpon>Services.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Service\OrderServiceGen.cs">
+      <DependentUpon>Services.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Service\Services.cs" />
+    <Compile Include="Model\Entities\Service\Services1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Services.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Entities\Service\UserService.cs" />
+    <Compile Include="Model\Entities\Service\UserServiceGen.cs">
+      <DependentUpon>Services.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Service\VehicleImageServiceGen.cs">
+      <DependentUpon>Services.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Service\VehicleServiceGen.cs">
+      <DependentUpon>Services.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Service\VehicleTypeServiceGen.cs">
+      <DependentUpon>Services.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Entities\User.cs">
       <DependentUpon>VehicleRentalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\UserRefined.cs">
+      <DependentUpon>EntityRefinery.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Entities\Vehicle.cs">
       <DependentUpon>VehicleRentalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Entities\VehicleImage.cs">
       <DependentUpon>VehicleRentalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\VehicleImageRefined.cs">
+      <DependentUpon>EntityRefinery.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\VehicleRefined.cs">
+      <DependentUpon>EntityRefinery.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Entities\VehicleRentalModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -85,6 +162,33 @@
     <Compile Include="Model\Entities\VehicleType.cs">
       <DependentUpon>VehicleRentalModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Entities\VehicleTypeRefined.cs">
+      <DependentUpon>EntityRefinery.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewModels\BrandViewModelGen.cs">
+      <DependentUpon>ViewModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewModels\OrderViewModelGen.cs">
+      <DependentUpon>ViewModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewModels\UserViewModelGen.cs">
+      <DependentUpon>ViewModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewModels\VehicleImageViewModelGen.cs">
+      <DependentUpon>ViewModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewModels\VehicleTypeViewModelGen.cs">
+      <DependentUpon>ViewModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewModels\VehicleViewModelGen.cs">
+      <DependentUpon>ViewModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewModels\ViewModel.cs" />
+    <Compile Include="Model\ViewModels\ViewModel1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +206,20 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Libs\SkyWeb.DatVM.Data.dll" />
+    <Content Include="Libs\SkyWeb.DatVM.Mvc.dll" />
+    <Content Include="Model\Entities\EntityRefinery.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EntityRefinery1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\Entities\Repositories\Repositories.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Repositories1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\Entities\Service\Services.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Services1.cs</LastGenOutput>
+    </Content>
     <Content Include="Model\Entities\VehicleRentalModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>VehicleRentalModel.edmx</DependentUpon>
@@ -111,6 +229,10 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>VehicleRentalModel.edmx</DependentUpon>
       <LastGenOutput>VehicleRentalModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\ViewModels\ViewModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ViewModel1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
