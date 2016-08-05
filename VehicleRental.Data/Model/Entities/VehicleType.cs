@@ -12,16 +12,16 @@ namespace VehicleRental.Data.Model.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class Type
+    public partial class VehicleType
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Type()
+        public VehicleType()
         {
             this.Vehicles = new HashSet<Vehicle>();
         }
     
         public int Id { get; set; }
-        public string Type1 { get; set; }
+        public string VehicleType1 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Vehicle> Vehicles { get; set; }

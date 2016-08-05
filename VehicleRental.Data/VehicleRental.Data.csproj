@@ -58,9 +58,6 @@
       <DependentUpon>VehicleRentalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Entities\Service\UserService.cs" />
-    <Compile Include="Model\Entities\Type.cs">
-      <DependentUpon>VehicleRentalModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\Entities\User.cs">
       <DependentUpon>VehicleRentalModel.tt</DependentUpon>
     </Compile>
@@ -85,19 +82,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VehicleRentalModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\Entities\VehicleType.cs">
+      <DependentUpon>VehicleRentalModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Model\Entities\VehicleRentalModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VehicleRentalModel.edmx</DependentUpon>
-      <LastGenOutput>VehicleRentalModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\Entities\VehicleRentalModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VehicleRentalModel.edmx</DependentUpon>
-      <LastGenOutput>VehicleRentalModel.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
@@ -112,6 +100,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\Entities\VehicleRentalModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VehicleRentalModel.edmx</DependentUpon>
+      <LastGenOutput>VehicleRentalModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\Entities\VehicleRentalModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VehicleRentalModel.edmx</DependentUpon>
+      <LastGenOutput>VehicleRentalModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

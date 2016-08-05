@@ -176,3 +176,9 @@ E:\GitHub\VehicleRental\VehicleRental\obj\Debug\VehicleRental.StringResource.Con
 E:\GitHub\VehicleRental\VehicleRental\obj\Debug\VehicleRental.csproj.GenerateResource.Cache
 E:\GitHub\VehicleRental\VehicleRental\bin\VehicleRental.Data.dll
 E:\GitHub\VehicleRental\VehicleRental\bin\VehicleRental.Data.pdb
+E:\GitHub\VehicleRental\VehicleRental\bin\Autofac.dll
+E:\GitHub\VehicleRental\VehicleRental\bin\Autofac.Integration.Mvc.dll
+E:\GitHub\VehicleRental\VehicleRental\bin\AutoMapper.dll
+E:\GitHub\VehicleRental\VehicleRental\bin\Autofac.xml
+E:\GitHub\VehicleRental\VehicleRental\bin\Autofac.Integration.Mvc.xml
+E:\GitHub\VehicleRental\VehicleRental\bin\AutoMapper.xml
