@@ -8,3 +8,34 @@ E:\GitHub\VehicleRental\VehicleRental.Data\bin\Debug\EntityFramework.SqlServer.x
 E:\GitHub\VehicleRental\VehicleRental.Data\obj\Debug\VehicleRental.Data.csprojResolveAssemblyReference.cache
 E:\GitHub\VehicleRental\VehicleRental.Data\obj\Debug\VehicleRental.Data.dll
 E:\GitHub\VehicleRental\VehicleRental.Data\obj\Debug\VehicleRental.Data.pdb
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\VehicleRental.Data.dll.config
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\VehicleRental.Data.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\VehicleRental.Data.pdb
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\Autofac.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\Autofac.Integration.Mvc.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\AutoMapper.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\EntityFramework.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\SkyWeb.DatVM.Data.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\SkyWeb.DatVM.Mvc.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\System.Web.Helpers.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\System.Web.Mvc.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\System.Web.Razor.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\System.Web.WebPages.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\Autofac.xml
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\Autofac.Integration.Mvc.xml
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\AutoMapper.xml
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\EntityFramework.xml
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\System.Web.Helpers.xml
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\System.Web.Mvc.xml
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\System.Web.Razor.xml
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\System.Web.WebPages.xml
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\obj\Debug\VehicleRental.Data.csprojResolveAssemblyReference.cache
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\obj\Debug\VehicleRental.Data.dll
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental.Data\obj\Debug\VehicleRental.Data.pdb

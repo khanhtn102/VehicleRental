@@ -179,3 +179,4 @@ E:\GitHub\VehicleRental\VehicleRental\bin\VehicleRental.Data.pdb
 C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental\obj\Debug\VehicleRental.csproj.App.config
 C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental\obj\Debug\VehicleRental.StringResource.Configuration.resources
 C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental\obj\Debug\VehicleRental.csproj.GenerateResource.Cache
+C:\Users\Luke Phan\Documents\VehicleRental\VehicleRental\obj\Debug\VehicleRental.csprojResolveAssemblyReference.cache

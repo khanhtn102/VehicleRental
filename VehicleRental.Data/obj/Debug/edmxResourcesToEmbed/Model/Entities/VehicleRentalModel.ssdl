@@ -22,13 +22,6 @@
     <Property Name="ReturnDate" Type="datetime" />
     <Property Name="IsActive" Type="bit" />
   </EntityType>
-  <EntityType Name="Type">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Type" Type="nvarchar" MaxLength="50" />
-  </EntityType>
   <EntityType Name="User">
     <Key>
       <PropertyRef Name="Id" />
@@ -38,7 +31,7 @@
     <Property Name="IdentifyId" Type="varchar" MaxLength="20" />
     <Property Name="Address" Type="nvarchar" MaxLength="250" />
     <Property Name="Phone" Type="varchar" MaxLength="20" />
-    <Property Name="Birthday" Type="date" />
+    <Property Name="Birthday" Type="datetime" />
     <Property Name="Sex" Type="bit" />
     <Property Name="Username" Type="varchar" MaxLength="20" />
     <Property Name="Password" Type="varchar" MaxLength="20" />
@@ -61,6 +54,8 @@
     <Property Name="ContractFileUrl" Type="nvarchar" MaxLength="250" />
     <Property Name="IsActive" Type="bit" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'VehicleRental.dbo.VehicleImage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="VehicleImage">
     <Key>
       <PropertyRef Name="id" />
@@ -68,6 +63,13 @@
     <Property Name="VehicleId" Type="int" />
     <Property Name="ImageUrl" Type="nvarchar" MaxLength="250" />
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VehicleType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VehicleType" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK_Order_Vehicle">
     <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="1" />
@@ -94,10 +96,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Vehicle_Type">
-    <End Role="Type" Type="Self.Type" Multiplicity="0..1" />
+    <End Role="VehicleType" Type="Self.VehicleType" Multiplicity="0..1" />
     <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Type">
+      <Principal Role="VehicleType">
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="Vehicle">
@@ -132,10 +134,16 @@
   <EntityContainer Name="VehicleRentalModelStoreContainer">
     <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Type" EntityType="Self.Type" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Vehicle" EntityType="Self.Vehicle" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="VehicleImage" EntityType="Self.VehicleImage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VehicleType" EntityType="Self.VehicleType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VehicleImage" EntityType="Self.VehicleImage" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VehicleImage].[VehicleId] AS [VehicleId], 
+    [VehicleImage].[ImageUrl] AS [ImageUrl], 
+    [VehicleImage].[id] AS [id]
+    FROM [dbo].[VehicleImage] AS [VehicleImage]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK_Order_Vehicle" Association="Self.FK_Order_Vehicle">
       <End Role="Vehicle" EntitySet="Vehicle" />
       <End Role="Order" EntitySet="Order" />
@@ -145,7 +153,7 @@
       <End Role="Vehicle" EntitySet="Vehicle" />
     </AssociationSet>
     <AssociationSet Name="FK_Vehicle_Type" Association="Self.FK_Vehicle_Type">
-      <End Role="Type" EntitySet="Type" />
+      <End Role="VehicleType" EntitySet="VehicleType" />
       <End Role="Vehicle" EntitySet="Vehicle" />
     </AssociationSet>
     <AssociationSet Name="FK_Vehicle_User" Association="Self.FK_Vehicle_User">

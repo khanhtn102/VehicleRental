@@ -127,9 +127,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Repositories.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Entities\Repositories\TypeRepositoryGen.cs">
-      <DependentUpon>Repositories.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\Entities\Repositories\UserRepositoryGen.cs">
       <DependentUpon>Repositories.tt</DependentUpon>
     </Compile>
@@ -137,6 +134,9 @@
       <DependentUpon>Repositories.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Entities\Repositories\VehicleRepositoryGen.cs">
+      <DependentUpon>Repositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Repositories\VehicleTypeRepositoryGen.cs">
       <DependentUpon>Repositories.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Entities\Service\BrandServiceGen.cs">
@@ -150,9 +150,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Services.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Entities\Service\TypeServiceGen.cs">
-      <DependentUpon>Services.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\Entities\Service\UserService.cs" />
     <Compile Include="Model\Entities\Service\UserServiceGen.cs">
       <DependentUpon>Services.tt</DependentUpon>
@@ -163,11 +160,8 @@
     <Compile Include="Model\Entities\Service\VehicleServiceGen.cs">
       <DependentUpon>Services.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Entities\Type.cs">
-      <DependentUpon>VehicleRentalModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Entities\TypeRefined.cs">
-      <DependentUpon>EntityRefinery.tt</DependentUpon>
+    <Compile Include="Model\Entities\Service\VehicleTypeServiceGen.cs">
+      <DependentUpon>Services.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Entities\User.cs">
       <DependentUpon>VehicleRentalModel.tt</DependentUpon>
@@ -202,19 +196,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VehicleRentalModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\Entities\VehicleType.cs">
+      <DependentUpon>VehicleRentalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\VehicleTypeRefined.cs">
+      <DependentUpon>EntityRefinery.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\ViewModels\BrandViewModelGen.cs">
       <DependentUpon>ViewModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ViewModels\OrderViewModelGen.cs">
       <DependentUpon>ViewModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ViewModels\TypeViewModelGen.cs">
-      <DependentUpon>ViewModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\ViewModels\UserViewModelGen.cs">
       <DependentUpon>ViewModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ViewModels\VehicleImageViewModelGen.cs">
+      <DependentUpon>ViewModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewModels\VehicleTypeViewModelGen.cs">
       <DependentUpon>ViewModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ViewModels\VehicleViewModelGen.cs">

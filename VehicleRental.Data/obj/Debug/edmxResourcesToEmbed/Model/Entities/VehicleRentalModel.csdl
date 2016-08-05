@@ -1,12 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="VehicleRentalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="VehicleRentalEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Brands" EntityType="VehicleRentalModel.Brand" />
+    <EntitySet Name="Orders" EntityType="VehicleRentalModel.Order" />
+    <EntitySet Name="Users" EntityType="VehicleRentalModel.User" />
+    <EntitySet Name="Vehicles" EntityType="VehicleRentalModel.Vehicle" />
+    <EntitySet Name="VehicleTypes" EntityType="VehicleRentalModel.VehicleType" />
+    <EntitySet Name="VehicleImages" EntityType="VehicleRentalModel.VehicleImage" />
+    <AssociationSet Name="FK_Vehicle_Brand" Association="VehicleRentalModel.FK_Vehicle_Brand">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="Vehicle" EntitySet="Vehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Vehicle" Association="VehicleRentalModel.FK_Order_Vehicle">
+      <End Role="Vehicle" EntitySet="Vehicles" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehicle_User" Association="VehicleRentalModel.FK_Vehicle_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Vehicle" EntitySet="Vehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehicle_Type" Association="VehicleRentalModel.FK_Vehicle_Type">
+      <End Role="VehicleType" EntitySet="VehicleTypes" />
+      <End Role="Vehicle" EntitySet="Vehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VehicleImage_Vehicle" Association="VehicleRentalModel.FK_VehicleImage_Vehicle">
+      <End Role="Vehicle" EntitySet="Vehicles" />
+      <End Role="VehicleImage" EntitySet="VehicleImages" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="Brand">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="BrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Vehicles" Relationship="Self.FK_Vehicle_Brand" FromRole="Brand" ToRole="Vehicle" />
+    <NavigationProperty Name="Vehicles" Relationship="VehicleRentalModel.FK_Vehicle_Brand" FromRole="Brand" ToRole="Vehicle" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
@@ -22,15 +50,7 @@
     <Property Name="RentDate" Type="DateTime" Precision="3" />
     <Property Name="ReturnDate" Type="DateTime" Precision="3" />
     <Property Name="IsActive" Type="Boolean" />
-    <NavigationProperty Name="Vehicle" Relationship="Self.FK_Order_Vehicle" FromRole="Order" ToRole="Vehicle" />
-  </EntityType>
-  <EntityType Name="Type">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Type1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Vehicles" Relationship="Self.FK_Vehicle_Type" FromRole="Type" ToRole="Vehicle" />
+    <NavigationProperty Name="Vehicle" Relationship="VehicleRentalModel.FK_Order_Vehicle" FromRole="Order" ToRole="Vehicle" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -41,13 +61,13 @@
     <Property Name="IdentifyId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="Birthday" Type="DateTime" Precision="0" />
+    <Property Name="Birthday" Type="DateTime" Precision="3" />
     <Property Name="Sex" Type="Boolean" />
     <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="IsAdmin" Type="Boolean" />
     <Property Name="IsActive" Type="Boolean" />
-    <NavigationProperty Name="Vehicles" Relationship="Self.FK_Vehicle_User" FromRole="User" ToRole="Vehicle" />
+    <NavigationProperty Name="Vehicles" Relationship="VehicleRentalModel.FK_Vehicle_User" FromRole="User" ToRole="Vehicle" />
   </EntityType>
   <EntityType Name="Vehicle">
     <Key>
@@ -64,11 +84,19 @@
     <Property Name="EndDate" Type="DateTime" Precision="3" />
     <Property Name="ContractFileUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="IsActive" Type="Boolean" />
-    <NavigationProperty Name="Brand" Relationship="Self.FK_Vehicle_Brand" FromRole="Vehicle" ToRole="Brand" />
-    <NavigationProperty Name="Orders" Relationship="Self.FK_Order_Vehicle" FromRole="Vehicle" ToRole="Order" />
-    <NavigationProperty Name="Type" Relationship="Self.FK_Vehicle_Type" FromRole="Vehicle" ToRole="Type" />
-    <NavigationProperty Name="User" Relationship="Self.FK_Vehicle_User" FromRole="Vehicle" ToRole="User" />
-    <NavigationProperty Name="VehicleImages" Relationship="Self.FK_VehicleImage_Vehicle" FromRole="Vehicle" ToRole="VehicleImage" />
+    <NavigationProperty Name="Brand" Relationship="VehicleRentalModel.FK_Vehicle_Brand" FromRole="Vehicle" ToRole="Brand" />
+    <NavigationProperty Name="Orders" Relationship="VehicleRentalModel.FK_Order_Vehicle" FromRole="Vehicle" ToRole="Order" />
+    <NavigationProperty Name="User" Relationship="VehicleRentalModel.FK_Vehicle_User" FromRole="Vehicle" ToRole="User" />
+    <NavigationProperty Name="VehicleType" Relationship="VehicleRentalModel.FK_Vehicle_Type" FromRole="Vehicle" ToRole="VehicleType" />
+    <NavigationProperty Name="VehicleImages" Relationship="VehicleRentalModel.FK_VehicleImage_Vehicle" FromRole="Vehicle" ToRole="VehicleImage" />
+  </EntityType>
+  <EntityType Name="VehicleType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VehicleType1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Vehicles" Relationship="VehicleRentalModel.FK_Vehicle_Type" FromRole="VehicleType" ToRole="Vehicle" />
   </EntityType>
   <EntityType Name="VehicleImage">
     <Key>
@@ -77,11 +105,11 @@
     <Property Name="VehicleId" Type="Int32" />
     <Property Name="ImageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <NavigationProperty Name="Vehicle" Relationship="Self.FK_VehicleImage_Vehicle" FromRole="VehicleImage" ToRole="Vehicle" />
+    <NavigationProperty Name="Vehicle" Relationship="VehicleRentalModel.FK_VehicleImage_Vehicle" FromRole="VehicleImage" ToRole="Vehicle" />
   </EntityType>
   <Association Name="FK_Vehicle_Brand">
-    <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
-    <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="*" />
+    <End Type="VehicleRentalModel.Brand" Role="Brand" Multiplicity="0..1" />
+    <End Type="VehicleRentalModel.Vehicle" Role="Vehicle" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Brand">
         <PropertyRef Name="Id" />
@@ -92,8 +120,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Order_Vehicle">
-    <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="1" />
-    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <End Type="VehicleRentalModel.Vehicle" Role="Vehicle" Multiplicity="1" />
+    <End Type="VehicleRentalModel.Order" Role="Order" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Vehicle">
         <PropertyRef Name="Id" />
@@ -103,21 +131,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Vehicle_Type">
-    <End Role="Type" Type="Self.Type" Multiplicity="0..1" />
-    <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Type">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Vehicle">
-        <PropertyRef Name="TypeId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Vehicle_User">
-    <End Role="User" Type="Self.User" Multiplicity="1" />
-    <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="*" />
+    <End Type="VehicleRentalModel.User" Role="User" Multiplicity="1" />
+    <End Type="VehicleRentalModel.Vehicle" Role="Vehicle" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="User">
         <PropertyRef Name="Id" />
@@ -127,9 +143,21 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Vehicle_Type">
+    <End Type="VehicleRentalModel.VehicleType" Role="VehicleType" Multiplicity="0..1" />
+    <End Type="VehicleRentalModel.Vehicle" Role="Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehicleType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Vehicle">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_VehicleImage_Vehicle">
-    <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="0..1" />
-    <End Role="VehicleImage" Type="Self.VehicleImage" Multiplicity="*" />
+    <End Type="VehicleRentalModel.Vehicle" Role="Vehicle" Multiplicity="0..1" />
+    <End Type="VehicleRentalModel.VehicleImage" Role="VehicleImage" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Vehicle">
         <PropertyRef Name="Id" />
@@ -139,32 +167,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="VehicleRentalEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Brands" EntityType="Self.Brand" />
-    <EntitySet Name="Orders" EntityType="Self.Order" />
-    <EntitySet Name="Types" EntityType="Self.Type" />
-    <EntitySet Name="Users" EntityType="Self.User" />
-    <EntitySet Name="Vehicles" EntityType="Self.Vehicle" />
-    <EntitySet Name="VehicleImages" EntityType="Self.VehicleImage" />
-    <AssociationSet Name="FK_Vehicle_Brand" Association="Self.FK_Vehicle_Brand">
-      <End Role="Brand" EntitySet="Brands" />
-      <End Role="Vehicle" EntitySet="Vehicles" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Order_Vehicle" Association="Self.FK_Order_Vehicle">
-      <End Role="Vehicle" EntitySet="Vehicles" />
-      <End Role="Order" EntitySet="Orders" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Vehicle_Type" Association="Self.FK_Vehicle_Type">
-      <End Role="Type" EntitySet="Types" />
-      <End Role="Vehicle" EntitySet="Vehicles" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Vehicle_User" Association="Self.FK_Vehicle_User">
-      <End Role="User" EntitySet="Users" />
-      <End Role="Vehicle" EntitySet="Vehicles" />
-    </AssociationSet>
-    <AssociationSet Name="FK_VehicleImage_Vehicle" Association="Self.FK_VehicleImage_Vehicle">
-      <End Role="Vehicle" EntitySet="Vehicles" />
-      <End Role="VehicleImage" EntitySet="VehicleImages" />
-    </AssociationSet>
-  </EntityContainer>
 </Schema>
