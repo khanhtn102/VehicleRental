@@ -63,3 +63,10 @@ E:\GitHub\VehicleRental\WebService\bin\EntityFramework.xml
 E:\GitHub\VehicleRental\WebService\bin\EntityFramework.SqlServer.xml
 E:\GitHub\VehicleRental\WebService\bin\VehicleRental.Data.dll
 E:\GitHub\VehicleRental\WebService\bin\VehicleRental.Data.pdb
+C:\Users\Luke Phan\Documents\VehicleRental\WebService\obj\Debug\WebService.csprojResolveAssemblyReference.cache
+E:\GitHub\VehicleRental\WebService\bin\Autofac.dll
+E:\GitHub\VehicleRental\WebService\bin\Autofac.Integration.Mvc.dll
+E:\GitHub\VehicleRental\WebService\bin\AutoMapper.dll
+E:\GitHub\VehicleRental\WebService\bin\Autofac.xml
+E:\GitHub\VehicleRental\WebService\bin\Autofac.Integration.Mvc.xml
+E:\GitHub\VehicleRental\WebService\bin\AutoMapper.xml

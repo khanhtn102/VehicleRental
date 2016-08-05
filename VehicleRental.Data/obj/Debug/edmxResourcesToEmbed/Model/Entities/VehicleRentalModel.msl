@@ -25,14 +25,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Types">
-      <EntityTypeMapping TypeName="VehicleRentalModel.Type">
-        <MappingFragment StoreEntitySet="Type">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Type1" ColumnName="Type" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="VehicleRentalModel.User">
         <MappingFragment StoreEntitySet="User">
@@ -73,6 +65,14 @@
           <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
           <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
           <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehicleTypes">
+      <EntityTypeMapping TypeName="VehicleRentalModel.VehicleType">
+        <MappingFragment StoreEntitySet="VehicleType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="VehicleType1" ColumnName="VehicleType" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
