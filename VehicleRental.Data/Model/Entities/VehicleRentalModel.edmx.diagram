@@ -5,17 +5,17 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="1a343a12569c442584059bbe106ec0f6" Name="Diagram1">
-        <EntityTypeShape EntityType="VehicleRentalModel.Brand" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="VehicleRentalModel.Order" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="VehicleRentalModel.Type" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="VehicleRentalModel.User" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="VehicleRentalModel.Vehicle" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="VehicleRentalModel.VehicleImage" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
-        <AssociationConnector Association="VehicleRentalModel.FK_Vehicle_Brand" ManuallyRouted="false" />
-        <AssociationConnector Association="VehicleRentalModel.FK_Order_Vehicle" ManuallyRouted="false" />
-        <AssociationConnector Association="VehicleRentalModel.FK_Vehicle_Type" ManuallyRouted="false" />
-        <AssociationConnector Association="VehicleRentalModel.FK_Vehicle_User" ManuallyRouted="false" />
-        <AssociationConnector Association="VehicleRentalModel.FK_VehicleImage_Vehicle" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="VehicleRentalModel.Brand" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="VehicleRentalModel.Order" Width="1.5" PointX="5.25" PointY="1.75" />
+        <EntityTypeShape EntityType="VehicleRentalModel.User" Width="1.5" PointX="0.75" PointY="7.125" />
+        <EntityTypeShape EntityType="VehicleRentalModel.Vehicle" Width="1.5" PointX="3" PointY="2.5" />
+        <EntityTypeShape EntityType="VehicleRentalModel.VehicleType" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VehicleRentalModel.VehicleImage" Width="1.5" PointX="5.25" PointY="5.625" />
+        <AssociationConnector Association="VehicleRentalModel.FK_Vehicle_Brand" />
+        <AssociationConnector Association="VehicleRentalModel.FK_Order_Vehicle" />
+        <AssociationConnector Association="VehicleRentalModel.FK_Vehicle_User" />
+        <AssociationConnector Association="VehicleRentalModel.FK_Vehicle_Type" />
+        <AssociationConnector Association="VehicleRentalModel.FK_VehicleImage_Vehicle" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

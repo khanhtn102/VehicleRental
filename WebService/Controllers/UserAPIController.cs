@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SkyWeb.DatVM.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -8,14 +9,14 @@ using VehicleRental.Data.Model.Entities.Service;
 
 namespace WebService.Controllers
 {
-    public class UserAPIController : ApiController
+    public class UserAPIController : BaseController
     {
         private IUserService Service = null;
 
-        public UserAPIController()
-        {
-            this.Service = new UserService();
-        }
+        //public UserAPIController()
+        //{
+        //    this.Service = new UserService();
+        //}
 
         // api/UserAPI/CheckLogin
         [HttpGet]

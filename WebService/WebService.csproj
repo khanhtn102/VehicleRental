@@ -85,6 +85,12 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SkyWeb.DatVM.Data">
+      <HintPath>..\..\Wisky\Wisky\Wisky\Libs\SkyWeb.DatVM.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyWeb.DatVM.Mvc">
+      <HintPath>..\..\Wisky\Wisky\Wisky\Libs\SkyWeb.DatVM.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
